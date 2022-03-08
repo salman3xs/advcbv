@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block body_block %}
+<ol>
+  {% for s in student %}
+  <li>{{s.name}}</li>
+  {% endfor %}
+</ol>
+{% endblock body_block %}

@@ -9,14 +9,17 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["name"] = 'ninja'
         return context
+
     
-class StudentView(DetailView):
+class SchoolListView(ListView):
     context_object_name = 'schools'
-    model = models.Student
-    template_name = 'basic/students.html'
-    
-class SchoolView(ListView):
-    context_object_name = 'students'
     model = models.School
-    template_name = 'basic/schools.html'
-    
+ 
+class SchoolDetailsView(DetailView):
+    context_object_name = 'school_detail'
+    model = models.School
+    template_name = 'basic/school_details.html'
+
+class StudentListView(ListView):
+    context_object_name = 'student'
+    model = models.Student
