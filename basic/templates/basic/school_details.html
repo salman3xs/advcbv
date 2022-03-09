@@ -11,4 +11,13 @@
         <p>{{student.name}} who is {{student.age}} </p>
     {% endfor %}
 </div>
+<div class="container">
+    <p><a class='btn btn-warning' href='{% url 'basic:update' pk=school_detail.pk %}'>Update</a></p>
+</div>
+<div class="container">
+    <p><a class='btn btn-warning' href='{% url 'basic:addstudent' %}'>Add Student</a></p>
+</div>
+<div class="container">
+    <p><a class='btn btn-danger' href='{% url 'basic:delete' pk=school_detail.pk %}'>Delete School</a></p>
+</div>
 {% endblock body_block %}

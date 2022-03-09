@@ -1,7 +1,11 @@
 {% extends 'base.html' %} {% block body_block %}
 <ol>
+  <h1>Student List</h1>
   {% for s in student %}
-  <li>{{s.name}}</li>
+  <li>{{s.name}} is {{s.age}} years old in {{s.school}}</li>
   {% endfor %}
 </ol>
+<div class="container">
+  <p><a class='btn btn-warning' href='{% url 'basic:addstudent' %}'>Add Student</a></p>
+</div>
 {% endblock body_block %}
