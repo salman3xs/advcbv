@@ -23,9 +23,3 @@ urlpatterns = [
     path('',views.IndexView.as_view()),
     path('basic/',include('basic.urls',namespace='basic'))
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns=[
-        path('__debug__/',include(debug_toolbar.urls))
-    ]
